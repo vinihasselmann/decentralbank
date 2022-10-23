@@ -5,17 +5,19 @@
   text-align: center;
 }
 
-.navbar {
-  background-color: black;
-  padding: 1rem 3rem;
+.dex {
+  margin: 100px auto;
+  border-radius: 20px;
+  padding: 30px;
+  width: 500px;
+  height: 300px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: white;
 }
 
 .wrapper {
   display: flex;
-  gap: 60px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -23,20 +25,27 @@
   width: 50px;
 }
 
-span {
-  font-size: 24px;
-  font-weight: bold;
+h3 {
+  font-size: 18px;
+  color: black;
 }
 
-button {
+.balance {
+  font-size: 20px;
+  color: black;
+}
+
+.dexbtn {
+  display: flex;
+  align-items: center;
   padding: 10px;
-  width: 200px;
-  height: 50px;
-  border: 1px solid white;
+  width: 100px;
+  height: 30px;
+  border: 1px solid black;
   border-radius: 10px;
   background-color: transparent;
   font-size: 16px;
-  color: white;
+  color: black;
   overflow: hidden;
   white-space: nowrap;                  
   text-overflow: ellipsis;

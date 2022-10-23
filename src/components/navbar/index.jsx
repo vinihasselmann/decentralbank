@@ -5,6 +5,8 @@ import "./styles.css";
 function NavBar() {
   const [isConnected, setIsConnected] = useState(false);
   const [walletAddress, SetWalletAddress] = useState("Connect your wallet 🦊");
+  
+
 
   const pressedConnectedWallet = async () => {
     if(isConnected) return alert(
@@ -13,7 +15,7 @@ function NavBar() {
 
     const walletResponse = await connectWallet();
     setIsConnected(walletResponse.connectedStatus);
-    SetWalletAddress(walletResponse.address)
+    SetWalletAddress("🟢"+walletResponse.address)
   }
 
   const connectWallet = async () => {
@@ -48,9 +50,11 @@ function NavBar() {
       <nav className="navbar">
         <a className="wrapper">
           <img className="logo" src={bank} alt="bank image" />
-          <span>Decentralbank</span>
+          <span className="title">Decentralbank</span>
         </a>
-        <button onClick={pressedConnectedWallet}>{walletAddress}</button>
+        <button
+        onClick={pressedConnectedWallet}
+        className="metamaskButton">{walletAddress}</button>
       </nav>
   );
 }
